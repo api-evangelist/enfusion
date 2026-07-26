@@ -1,0 +1,21 @@
+{
+  "repo": "enfusion",
+  "feeds": [
+    {
+      "source": "https://www.enfusion.com/feed/",
+      "feed_url": "https://www.enfusion.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.enfusion.com/",
+      "feed_url": "https://www.enfusion.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 9,
+  "fetched": "2026-07-25T15:00:33Z"
+}

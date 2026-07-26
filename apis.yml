@@ -1,21 +1,50 @@
 aid: enfusion
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/enfusion.png
 name: Enfusion
-description: 'Enfusion is a company surfaced as a portfolio company of iconiq-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'Enfusion is a cloud-native, front-to-back investment management platform for hedge funds
+  and asset managers, unifying portfolio management (PMS), order and execution management (OEMS),
+  pre- and post-trade compliance, a unified IBOR/ABOR accounting book of record, and analytics on a
+  single SaaS database. It serves over 1,000 clients across 30 countries, offers direct connectivity
+  to 300+ liquidity sources via FIX, and maintains a 4M+ instrument security master. Enfusion was
+  acquired by Clearwater Analytics (CWAN) in 2025; the enfusion.com domain now redirects to cwan.com,
+  where Enfusion is offered as a product line. There is no public developer portal or open API
+  specification: the platform API and knowledge base are gated behind the client web application and
+  Zendesk help center. This profile was surfaced as an ICONIQ Capital portfolio lead and enriched
+  from public marketing, support, and legal surfaces.'
 url: https://raw.githubusercontent.com/api-evangelist/enfusion/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - iconiq-capital
+x-acquired-by: clearwater-analytics
+x-redirects-to: https://cwan.com/products/enfusion/
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Fintech
+- Investment Management
+- Hedge Funds
+- Asset Management
+- Portfolio Management
+- Order Management System
+- Trading
+- Compliance
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +52,24 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/enfusion-domain-security.yml
 - type: Website
   url: https://www.enfusion.com/
+- type: Blog
+  url: https://cwan.com/resources/blog/
+- type: Support
+  url: https://cwan.com/support/enfusion/
+- type: HelpCenter
+  url: https://zendesk.enfusionsystems.com/hc/
+- type: Login
+  url: https://webapp.enfusionsystems.com/
+- type: PrivacyPolicy
+  url: https://cwan.com/privacy-policy/
+- type: TermsOfService
+  url: https://cwan.com/enfusion-platform-terms-and-conditions/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
