@@ -53,7 +53,7 @@ tags:
 - Investment Management
 - Hedge Funds
 - Asset Management
-- Portfolio-Management
+- Portfolio Management
 - OMS
 - Trading
 - Compliance
@@ -69,6 +69,7 @@ tags_raw:
 - Trading
 - Compliance
 - SaaS
+- Portfolio-Management
 apis: []
 maintainers:
 - FN: Kin Lane
