@@ -18,23 +18,25 @@ accessModel:
   public: false
   label: Unknown
   confidence: low
-  source: []
+  source:
+  - url: https://www.enfusion.com/
+    status: 301
+    note: declared website redirects to https://cwan.com/ — a different registrable domain (enfusion.com
+      -> cwan.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)
   generated: '2026-07-22'
   method: derived
-  source:
-  - {url: 'https://www.enfusion.com/', status: 301, note: 'declared website redirects to https://cwan.com/ — a different registrable domain (enfusion.com -> cwan.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/enfusion.png
 name: Enfusion
 description: 'Enfusion is a cloud-native, front-to-back investment management platform for hedge funds
-  and asset managers, unifying portfolio management (PMS), order and execution management (OEMS),
-  pre- and post-trade compliance, a unified IBOR/ABOR accounting book of record, and analytics on a
-  single SaaS database. It serves over 1,000 clients across 30 countries, offers direct connectivity
-  to 300+ liquidity sources via FIX, and maintains a 4M+ instrument security master. Enfusion was
-  acquired by Clearwater Analytics (CWAN) in 2025; the enfusion.com domain now redirects to cwan.com,
-  where Enfusion is offered as a product line. There is no public developer portal or open API
-  specification: the platform API and knowledge base are gated behind the client web application and
-  Zendesk help center. This profile was surfaced as an ICONIQ Capital portfolio lead and enriched
-  from public marketing, support, and legal surfaces.'
+  and asset managers, unifying portfolio management (PMS), order and execution management (OEMS), pre-
+  and post-trade compliance, a unified IBOR/ABOR accounting book of record, and analytics on a single
+  SaaS database. It serves over 1,000 clients across 30 countries, offers direct connectivity to 300+
+  liquidity sources via FIX, and maintains a 4M+ instrument security master. Enfusion was acquired by
+  Clearwater Analytics (CWAN) in 2025; the enfusion.com domain now redirects to cwan.com, where Enfusion
+  is offered as a product line. There is no public developer portal or open API specification: the platform
+  API and knowledge base are gated behind the client web application and Zendesk help center. This profile
+  was surfaced as an ICONIQ Capital portfolio lead and enriched from public marketing, support, and legal
+  surfaces.'
 url: https://raw.githubusercontent.com/api-evangelist/enfusion/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -42,8 +44,8 @@ x-backed-by:
 - iconiq-capital
 x-acquired-by: clearwater-analytics
 x-redirects-to: https://cwan.com/products/enfusion/
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (local-v5; was portfolio-lead)
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
@@ -70,13 +72,22 @@ tags_raw:
 - Compliance
 - SaaS
 - Portfolio-Management
-apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/enfusion-llms.txt
+- type: Hosts
+  url: hosts/enfusion-hosts.yml
+- type: Vendors
+  url: vendors/enfusion-vendors.yml
+- type: Newsroom
+  url: https://cwan.com/company/newsroom/
+- type: Leadership
+  url: https://cwan.com/company/leadership/
 - type: DomainSecurity
   url: security/enfusion-domain-security.yml
 - type: Website
@@ -93,8 +104,23 @@ common:
   url: https://cwan.com/privacy-policy/
 - type: TermsOfService
   url: https://cwan.com/enfusion-platform-terms-and-conditions/
+apis: []
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v5
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: Enfusion (now a Clearwater Analytics product at cwan.com) publishes no developer portal or spec;
+    its knowledge base at zendesk.enfusionsystems.com returns 403, its MCP endpoint 401, and the platform
+    sits behind the webapp.enfusionsystems.com client login.
+  evidence:
+  - url: https://zendesk.enfusionsystems.com/hc/
+    status: 403
+  - url: https://zendesk.enfusionsystems.com/mcp
+    status: 401
+  - url: https://cwan.com/products/enfusion/
+    status: 200
+  checked: '2026-10-20'

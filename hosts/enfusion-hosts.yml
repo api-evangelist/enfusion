@@ -1,0 +1,97 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 2
+  other_domain: 5
+  platform: 0
+  roles:
+  - api
+  - identity
+  - other
+  - support
+  - website
+hosts:
+- host: api.cwan.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: cwan.com
+  role: api
+  relation: other-domain
+- host: api.enfusion.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: enfusion.com
+  role: api
+  relation: own
+- host: api.enfusionsystems.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: enfusionsystems.com
+  role: api
+  relation: other-domain
+- host: cwan.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - Leadership
+  - Blog
+  - Support
+  - PrivacyPolicy
+  - TermsOfService
+  serves: []
+  registrable_domain: cwan.com
+  role: support
+  relation: other-domain
+- host: webapp.enfusionsystems.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: enfusionsystems.com
+  role: identity
+  relation: other-domain
+- host: www.enfusion.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: enfusion.com
+  role: website
+  relation: own
+- host: zendesk.enfusionsystems.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - HelpCenter
+  serves:
+  - support
+  vendor: zendesk
+  registrable_domain: enfusionsystems.com
+  role: other
+  relation: other-domain
